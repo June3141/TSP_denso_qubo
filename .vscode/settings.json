@@ -1,0 +1,13 @@
+{
+  // ==== general setting =====================================================
+  "editor.formatOnSave": true,
+  // ==== python ==============================================================
+  // env
+  "python.venvPath": ".venv",
+  "python.pythonPath": ".venv/bin/python3",
+  // linter
+  "python.linting.pylintEnabled": true,
+  "python.linting.lintOnSave": true,
+  // formater
+  "python.formatting.provider": "black"
+}
