@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "TSP_denso_qubo"
+version = "0.1.0"
+description = ""
+authors = ["june3141 <ryoushi0620@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pyqubo = "^0.4.0"
+dwave-ocean-sdk = "^1.6.0"
+openjij = "^0.0.9"
+matplotlib = "^3.1.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6"
+pylint = "^2.4.4"
+jupyter = "^1.0.0"
+black = "^19.10b0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
