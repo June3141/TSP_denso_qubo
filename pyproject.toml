@@ -18,6 +18,7 @@ jupyter = "^1.0.0"
 black = "^19.10b0"
 isort = {extras = ["pyproject"], version = "^4.3.21"}
 pre-commit = "^2.1.0"
+seed-isort-config = {extras = ["pyproject"], version = "^2.0.0"}
 
 [tool.black]
 line_length = 120
