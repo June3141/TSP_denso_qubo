@@ -8,6 +8,7 @@
   // linter
   "python.linting.pylintEnabled": true,
   "python.linting.lintOnSave": true,
+  "python.linting.mypyEnabled": true,
   // formater
   "python.formatting.provider": "black"
 }
