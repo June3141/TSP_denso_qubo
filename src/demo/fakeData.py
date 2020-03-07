@@ -7,17 +7,16 @@ import nptyping
 import numpy as np
 
 
-def makeData(citiSize: int) -> Tuple[nptyping.Array[int], nptyping.Array[int]]:
-    citiesLocation = np.random.randint(0, 100, (citiSize, 2))
+def makeDemoData(citiesSize: int) -> Tuple[nptyping.Array[int], nptyping.Array[int]]:
+    citiesLocation = np.random.randint(0, 100, (citiesSize, 2))
     pathsWeight = [
         [
-            [
-                math.sqrt(abs(citiesLocation[i, 0] ** 2 - citiesLocation[j, 0] ** 2)),
-                math.sqrt(abs(citiesLocation[i, 1] ** 2 - citiesLocation[j, 1] ** 2)),
-            ]
-            for j in range(citiSize)
+            math.sqrt(
+                (citiesLocation[i, 0] - citiesLocation[j, 0]) ** 2 + (citiesLocation[i, 1] - citiesLocation[j, 1]) ** 2
+            )
+            for j in range(citiesSize)
         ]
-        for i in range(citiSize)
+        for i in range(citiesSize)
     ]
 
     pathsWeight = np.array(pathsWeight)
@@ -26,7 +25,7 @@ def makeData(citiSize: int) -> Tuple[nptyping.Array[int], nptyping.Array[int]]:
 
 
 if __name__ == "__main__":
-    citiesLocation, pathsWeight = makeData(3)
+    citiesLocation, pathsWeight = makeDemoData(3)
 
     print("==== cities location ==================================")
     print(citiesLocation)
