@@ -67,7 +67,7 @@ def TSPHamiltonian(citiesSize: int, pathsWeight: nptyping.Array[int]):
         + pyqubo.Placeholder("lamVisit") * visitConstrain
     )
 
-    return hamiltonian.compile()
+    return hamiltonian
 
 
 def create(citiesSize: int, pathsWeight: nptyping.Array[int]):
