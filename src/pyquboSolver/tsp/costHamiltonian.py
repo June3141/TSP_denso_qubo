@@ -70,7 +70,7 @@ def TSPHamiltonian(citiesSize: int, pathsWeight: nptyping.Array[int]):
     return hamiltonian
 
 
-def create(citiesSize: int, pathsWeight: nptyping.Array[int]):
+def makeHamiltonian(citiesSize: int, pathsWeight: nptyping.Array[int]):
     costFunction = TSPHamiltonian(citiesSize, pathsWeight)
 
     return costFunction.compile()
