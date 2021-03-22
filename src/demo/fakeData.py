@@ -7,7 +7,7 @@ import nptyping
 import numpy as np
 
 
-def makeDemoData(citiesSize: int) -> Tuple[nptyping.Array[int], nptyping.Array[int]]:
+def makeDemoData(citiesSize: int) -> Tuple[nptyping.NDArray[int], nptyping.NDArray[int]]:
     citiesLocation = np.random.randint(0, 100, (citiesSize, 2))
     pathsWeight = [
         [

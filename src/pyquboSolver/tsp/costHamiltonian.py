@@ -5,7 +5,7 @@ import nptyping
 import pyqubo
 
 
-def pathsWeightChecker(citiesSize: int, pathsWeight: nptyping.Array[int]) -> bool:
+def pathsWeightChecker(citiesSize: int, pathsWeight: nptyping.NDArray[int]) -> bool:
 
     if len(pathsWeight) == citiesSize and len(pathsWeight[0]) == citiesSize:
         return True
@@ -24,7 +24,7 @@ def pathsWeightChecker(citiesSize: int, pathsWeight: nptyping.Array[int]) -> boo
         return False
 
 
-def TSPHamiltonian(citiesSize: int, pathsWeight: nptyping.Array[int]):
+def TSPHamiltonian(citiesSize: int, pathsWeight: nptyping.NDArray[int]):
 
     if pathsWeightChecker(citiesSize, pathsWeight):
         pass
@@ -70,7 +70,7 @@ def TSPHamiltonian(citiesSize: int, pathsWeight: nptyping.Array[int]):
     return hamiltonian
 
 
-def makeHamiltonian(citiesSize: int, pathsWeight: nptyping.Array[int]):
+def makeHamiltonian(citiesSize: int, pathsWeight: nptyping.NDArray[int]):
     costFunction = TSPHamiltonian(citiesSize, pathsWeight)
 
     return costFunction.compile()
