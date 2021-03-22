@@ -14,9 +14,10 @@ TBR
 #### dependencies
 
 - python = ^3.7
-- pyqubo = ^0.4.0
+- pyqubo = 0.4.0
 - openjij = ^0.0.9
 - matplotlib = ^3.1.3
+- nptyping = ^1.4.0
 
 #### dev-dependencies
 

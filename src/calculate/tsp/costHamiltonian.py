@@ -27,14 +27,14 @@ def pathsDictChecker(citiesSize: int, pathsWeight: Dict[Tuple[int, int], int]) -
         return False
 
 
-def distanceCosts(citiesSize: int, pathsWeight: dict) -> nptyping.Array[int]:
+def distanceCosts(citiesSize: int, pathsWeight: dict) -> nptyping.NDArray[int]:
 
     if pathsDictChecker(citiesSize, pathsWeight):
         pass
     else:
         sys.exit()
 
-    pathsWeightArray: nptyping.Array[int] = pathsWeightMatrix(citiesSize, pathsWeight)
+    pathsWeightArray: nptyping.NDArray[int] = pathsWeightMatrix(citiesSize, pathsWeight)
 
     quboSize: int = citiesSize ** 2
     quboMatrix = np.zeros((quboSize, quboSize), dtype=int)
@@ -69,10 +69,10 @@ def distanceCosts(citiesSize: int, pathsWeight: dict) -> nptyping.Array[int]:
     return quboMatrix
 
 
-def pathsWeightMatrix(citiesSize: int, pathsWeight: Dict[Tuple[int, int], int]) -> nptyping.Array[int]:
+def pathsWeightMatrix(citiesSize: int, pathsWeight: Dict[Tuple[int, int], int]) -> nptyping.NDArray[int]:
     indices: List[Tuple[int, ...]] = list(itertools.combinations(range(citiesSize), 2))
 
-    pathsWeightArray: nptyping.Array[int] = np.zeros((citiesSize, citiesSize), dtype=int)
+    pathsWeightArray: nptyping.NDArray[int] = np.zeros((citiesSize, citiesSize), dtype=int)
 
     for t in range(len(indices)):
         (i, j) = indices[t]
@@ -84,7 +84,7 @@ def pathsWeightMatrix(citiesSize: int, pathsWeight: Dict[Tuple[int, int], int]) 
     return pathsWeightArray
 
 
-def costs(citiesSize: int, pathsWeight: dict) -> nptyping.Array[int]:
+def costs(citiesSize: int, pathsWeight: dict) -> nptyping.NDArray[int]:
     return distanceCosts(citiesSize, pathsWeight)
 
 

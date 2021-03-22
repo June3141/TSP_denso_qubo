@@ -8,7 +8,7 @@ import nptyping
 import numpy as np
 
 
-def plotMap(citiesLocation: nptyping.Array, orderList: List[int]) -> None:
+def plotMap(citiesLocation: nptyping.NDArray, orderList: List[int]) -> None:
     citiesSize = len(citiesLocation)
 
     citiesX = [citiesLocation[i, 0] for i in range(citiesSize)]

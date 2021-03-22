@@ -3,7 +3,7 @@ import nptyping
 import numpy as np
 
 
-def visitingConstrain(citiesSize: int) -> nptyping.Array[int]:
+def visitingConstrain(citiesSize: int) -> nptyping.NDArray[int]:
     quboSize = citiesSize ** 2
     quboMatrix = np.zeros((quboSize, quboSize), dtype=int)
 
@@ -31,7 +31,7 @@ def visitingConstrain(citiesSize: int) -> nptyping.Array[int]:
     return quboMatrix
 
 
-def oneUnitConstrain(citiesSize: int) -> nptyping.Array[int]:
+def oneUnitConstrain(citiesSize: int) -> nptyping.NDArray[int]:
     quboSize = citiesSize ** 2
     quboMatrix = np.zeros((quboSize, quboSize), dtype=int)
 
@@ -59,7 +59,7 @@ def oneUnitConstrain(citiesSize: int) -> nptyping.Array[int]:
     return quboMatrix
 
 
-def constrains(citiesSize: int) -> nptyping.Array[int]:
+def constrains(citiesSize: int) -> nptyping.NDArray[int]:
     return visitingConstrain(citiesSize) + oneUnitConstrain(citiesSize)
 
 
